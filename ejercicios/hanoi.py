@@ -35,10 +35,11 @@ def llenar_pilas(n):
         torre1.apilar(i)
         torreaux.apilar(0)
         torre2.apilar(0)
-        
+        print(torre1(),torre2(),torreaux())
     torre1.puntero=n
     torreaux.puntero=0
     torre2.puntero=0
+    print(torre1,torre2,torreaux)
 
 
 
@@ -46,8 +47,14 @@ def llenar_pilas(n):
 
 def hanoi(n,inicio,final,aux):
     if n == 1:
-        print(inicio-1,"---",final-1)
+        print(inicio,"---",final)
     else:
         hanoi(n-1,inicio,aux,final) #aux y final al reves
-        print(inicio-1,"---",final-1)
+        print(inicio,"---",final)
         hanoi(n-1,aux,final,inicio)  #origen y dest
+
+
+n = int(input("Cant de discos:"))
+       
+hanoi(n,1,2,3)
+llenar_pilas(n)
