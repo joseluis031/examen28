@@ -66,7 +66,7 @@ def sumar(polinomio1, polinomio2):
     paux = Polinomio()
     mayor = polinomio1 if (polinomio1.grado > polinomio2.grado) else polinomio2
     for i in range(0, mayor.grado +1):
-        total = obtener_valor(polinomio1, i) + object(polinomio2, i)
+        total = obtener_valor(polinomio1, i) + obtener_valor(polinomio2, i)
         if (total != 0):
             agregar_termino(paux, i, total)
     return paux
@@ -87,4 +87,13 @@ def multiplicar(polinomio1, polinomio2):
                 agregar_termino(paux, termino, valor)
             pol2 = pol2.sig
         pol1 = pol1.sig
+    return paux
+
+def restar(polinomio1,polinomio2):
+    paux = Polinomio()
+    mayor = polinomio1 if (polinomio1.grado > polinomio2.grado) else polinomio2
+    for i in range(0, mayor.grado +1):
+        total = obtener_valor(polinomio1, i) - obtener_valor(polinomio2, i)
+        if (total != 0):
+            agregar_termino(paux, i, total)
     return paux
