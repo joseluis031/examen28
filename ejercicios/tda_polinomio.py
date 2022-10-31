@@ -116,17 +116,39 @@ def dividir(polinomio1,polinomio2):
     return paux
 
 
-    def eliminar(polinomio,termino):
-        pol1 = polinomio.termino_mayor
+def eliminar(polinomio,termino):
+    pol1 = polinomio.termino_mayor
+    while pol1 is not None:
+        termino2 = pol1.info.termino
+        if termino2 == termino:
+            pol1.info.valor = 0
+            print("Se ha eliminado el termino")
+        else:
+            pol1 = pol1.sig
+            
+def determinar(polinomio,termino):
+    aux = polinomio.termino_mayor
+    while (aux is not None):
+        termino_aux = aux.info.termino
+        if (termino_aux == termino):
+            return aux.info.valor
+        
+        else: 
+            return aux.sig
 
 
 x_3= Polinomio()
 agregar_termino(x_3,3,1)
 x_2 = Polinomio()
 agregar_termino(x_2,2,1)
-
+print("Operacion restar")
 resta = restar(x_3,x_2)
 print(mostrar(resta))
-
+print("Operacion dividir")
 division = dividir(x_3,x_2)
 print(mostrar(division))
+print("Eliminacion")
+eliminar(x_2,1)
+print(mostrar(x_2))
+print("4 funcion")
+print(determinar(x_2,3))
