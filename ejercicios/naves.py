@@ -59,3 +59,43 @@ def Mas_tripulantes():
         
 Mas_tripulantes()
     
+def AT():
+    at = []
+    for i in lista:
+        at.append(i["Nombre"])
+    if "AT" in at:
+            print(at)
+    else:
+            print("No existe nave que tenga AT")
+            
+AT()
+
+def pasajeros6():
+    pas = []
+    for i in lista:
+        if int(i["Pasajeros"]) >=6:
+            pas.append(i["Nombre"])
+        else:pass
+    print("Las naves q pueden llevar 6 o mas son:",pas)
+    
+pasajeros6()
+
+def Mayor():
+    mayor = []
+    for i in lista:
+        mayor.append(i["Largo"])
+    for i in lista:
+        if i["Largo"] == max(mayor):
+            print(i)
+            
+Mayor()
+
+def Menor():
+    menor = []
+    for i in lista:
+        menor.append(i["Largo"])
+    for i in lista:
+        if i["Largo"] == min(menor):
+            print(i)
+            
+Menor()
