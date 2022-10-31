@@ -137,18 +137,3 @@ def determinar(polinomio,termino):
             return aux.sig
 
 
-x_3= Polinomio()
-agregar_termino(x_3,3,1)
-x_2 = Polinomio()
-agregar_termino(x_2,2,1)
-print("Operacion restar")
-resta = restar(x_3,x_2)
-print(mostrar(resta))
-print("Operacion dividir")
-division = dividir(x_3,x_2)
-print(mostrar(division))
-print("Eliminacion")
-eliminar(x_2,1)
-print(mostrar(x_2))
-print("4 funcion")
-print(determinar(x_2,3))
