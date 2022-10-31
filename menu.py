@@ -22,49 +22,65 @@ def iniciar():
 
         if opcion == '1':
             print("Enunciado del ejercicio 1...\n")
-            import sympy as sp
-            from Clase.ejercicio import Ecuacion1
-            x = sp.Symbol("x")
-            y = sp.Function("y")
+            from ejercicios.Hanoi import hanoi,llenar_pilas
 
-            a = y(x).diff(x)
-            sol1 = Ecuacion1(x,y,a)
-            print(sol1)
-            sol1.resolver()
+            n = int(input("Cant de discos:"))
+       
+            hanoi(n,1,2,3)
+            llenar_pilas(n)
+
+            
 
         elif opcion == '2':
             print("Enunciado del ejercicio 2...\n")
-            import sympy as sp
-            from Clase.ejercicio2 import Ecuacion2
-            x = sp.Symbol("x")
-            y = sp.Function("y")
+            import copy
+            from ejercicios.matriz import matriz_iterativa,matriz_recursiva
+            import copy
+            print("el determinante de la matriz de forma recursiva es",matriz_recursiva([[3,5,8],[2,4,1],[2,0,7]]))
             
-            sol2 = Ecuacion2(x,y,a)
-            print(sol2)
-            sol2.resolver()
+            print("el determinante de La matriz de forma iterativa es",matriz_iterativa([[3,5,8],[2,4,1],[2,0,7]]))
 
         elif opcion == '3':
             print("Enunciado del ejercicio 3...\n")
-            import sympy as sp
-            from Clase.ejercicio3 import Ecuacion3
-            x = sp.Symbol("x")
-            y = sp.Function("y")
-            
-            sol3 = Ecuacion3(x,y,a)
-            print(sol3)
-            sol3.resolver()
+            from ejercicios.naves import ordenar,ordenar2,Halcon,Estrella,Mas_pasajeros,Mas_tripulantes,AT,pasajeros6,Mayor,Menor
+            import csv
+
+            with open("Naves.csv","r") as file:
+                reader = csv.DictReader(file, delimiter=";") #leo csv
+                lista = list(reader) #lo paso a lista para q las funciones sean mas faciles
+                ordenar()
+                ordenar2()
+                Halcon()
+                Estrella()
+                Mas_pasajeros()
+                Mas_tripulantes()
+                AT()
+                pasajeros6()
+                Mayor()
+                Menor()
+                
             
 
         elif opcion == '4':
             print("Enunciado del ejercicio 4...\n")
-            import sympy as sp
-            from Clase.ejercicio4 import Ecuacion4
-            x = sp.Symbol("x")
-            y = sp.Function("y")
-            
-            sol4 = Ecuacion4(x,y,a)
-            print(sol4)
-            sol4.resolver()
+            from ejercicios.tda_polinomio import Polinomio,agregar_termino,mostrar,restar,dividir,eliminar,determinar
+            class Nodo(object):
+                info, sig = None, None            
+            x_3= Polinomio()
+            agregar_termino(x_3,3,1)
+            x_2 = Polinomio()
+            agregar_termino(x_2,2,1)
+            print("Operacion restar")
+            resta = restar(x_3,x_2)
+            print(mostrar(resta))
+            print("Operacion dividir")
+            division = dividir(x_3,x_2)
+            print(mostrar(division))
+            print("Eliminacion")
+            eliminar(x_2,1)
+            print(mostrar(x_2))
+            print("4 funcion")
+            print(determinar(x_2,3))
 
         
         elif opcion == '5':
@@ -72,3 +88,5 @@ def iniciar():
             break
 
         input("\nPresiona ENTER para continuar...")
+        
+iniciar()

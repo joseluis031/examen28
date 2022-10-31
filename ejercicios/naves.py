@@ -11,7 +11,6 @@ def ordenar():
     a = sorted(orden)
     print("Las naves ordenadas son: ",a)
     
-ordenar()
 
 def ordenar2():
     orden = []
@@ -20,7 +19,6 @@ def ordenar2():
     orden.sort(reverse=True)
     print("Las naves ordenadas de mayor a menor por su largo son: ",orden)
     
-ordenar2()
 
 def Halcon():
     halcon = []
@@ -28,7 +26,6 @@ def Halcon():
         if i["Nombre"] == "Halcon Milenario":
             halcon.append(i)
     print(halcon)  
-Halcon()
 
 def Estrella():
     estrella = []
@@ -36,7 +33,6 @@ def Estrella():
         if i["Nombre"] == "Estrella de la Muerte":
             estrella.append(i)
     print(estrella)  
-Estrella()
 
 def Mas_pasajeros():
     pasj = []
@@ -46,7 +42,6 @@ def Mas_pasajeros():
     top3 = pasj[2:5]
     print("Top 3 naves que necesitas mas pasajeros:",top3)
     
-Mas_pasajeros()
 
 
 def Mas_tripulantes():
@@ -57,7 +52,6 @@ def Mas_tripulantes():
         if i["Tripulacion"] == max(trip):
             print(i["Nombre"],"con",i["Tripulacion"])
         
-Mas_tripulantes()
     
 def AT():
     at = []
@@ -68,7 +62,6 @@ def AT():
     else:
             print("No existe nave que tenga AT")
             
-AT()
 
 def pasajeros6():
     pas = []
@@ -78,7 +71,6 @@ def pasajeros6():
         else:pass
     print("Las naves q pueden llevar 6 o mas son:",pas)
     
-pasajeros6()
 
 def Mayor():
     mayor = []
@@ -88,7 +80,6 @@ def Mayor():
         if i["Largo"] == max(mayor):
             print(i)
             
-Mayor()
 
 def Menor():
     menor = []
@@ -98,4 +89,3 @@ def Menor():
         if i["Largo"] == min(menor):
             print(i)
             
-Menor()
