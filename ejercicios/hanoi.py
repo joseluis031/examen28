@@ -1,4 +1,4 @@
-from codigo_pilas import Pila,apilar,de
+from codigo_pilas import Pila
 torre1 = Pila() #pila vacia
 torreaux = Pila()   #pila vacia
 torre2 = Pila() #pila vacia
@@ -35,11 +35,10 @@ def llenar_pilas(n):
         torre1.apilar(i)
         torreaux.apilar(0)
         torre2.apilar(0)
-        print(torre1(),torre2(),torreaux())
     torre1.puntero=n
     torreaux.puntero=0
     torre2.puntero=0
-    print(torre1,torre2,torreaux)
+    print (torre1,torre2,torreaux)
 
 
 
@@ -49,9 +48,9 @@ def hanoi(n,inicio,final,aux):
     if n == 1:
         print(inicio,"---",final)
     else:
-        hanoi(n-1,inicio,aux,final) #aux y final al reves
+        hanoi(n-1,inicio,aux,final)
         print(inicio,"---",final)
-        hanoi(n-1,aux,final,inicio)  #origen y dest
+        hanoi(n-1,aux,final,inicio)  
 
 
 n = int(input("Cant de discos:"))
