@@ -38,4 +38,24 @@ def Estrella():
     print(estrella)  
 Estrella()
 
+def Mas_pasajeros():
+    pasj = []
+    for i in lista:
+        pasj.append(i["Pasajeros"])
+    pasj.sort(reverse=False)
+    top3 = pasj[2:5]
+    print("Top 3 naves que necesitas mas pasajeros:",top3)
+    
+Mas_pasajeros()
+
+
+def Mas_tripulantes():
+    trip = []
+    for i in lista:
+        trip.append(i["Tripulacion"])
+    for i in lista:
+        if i["Tripulacion"] == max(trip):
+            print(i["Nombre"],"con",i["Tripulacion"])
+        
+Mas_tripulantes()
     
