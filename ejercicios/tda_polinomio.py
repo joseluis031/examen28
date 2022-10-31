@@ -120,7 +120,6 @@ def dividir(polinomio1,polinomio2):
         pol1 = polinomio.termino_mayor
 
 
-
 x_3= Polinomio()
 agregar_termino(x_3,3,1)
 x_2 = Polinomio()
