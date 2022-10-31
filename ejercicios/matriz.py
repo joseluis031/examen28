@@ -29,3 +29,8 @@ def matriz_iterativa(matriz):
     return suma
 
 print(matriz_iterativa([[3,5,8],[2,4,1],[2,0,7]]))
+
+
+print("la matriz de forma recursiva es",matriz_recursiva([[3,5,8],[2,4,1],[2,0,7]]))
+            
+print("La matriz de forma iterativa es",matriz_iterativa([[3,5,8],[2,4,1],[2,0,7]]))
