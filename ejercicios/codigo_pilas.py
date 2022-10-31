@@ -10,7 +10,7 @@ class Pila(object):
         self.cima = None
         self.tamanio = 0
 
-def apilar(pila, dato):
+    def apilar(pila, dato):
         #apila el dato sobre la cima de la pila
         nodo = nodoPila()  #se debe crear esta variable
         nodo.info = dato    #se le asigna info(el valor del elemento ingresado como dato)
