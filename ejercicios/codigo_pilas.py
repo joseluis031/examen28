@@ -10,7 +10,7 @@ class Pila(object):
         self.cima = None
         self.tamanio = 0
 
-    def apilar(pila, dato):
+def apilar(pila, dato):
         #apila el dato sobre la cima de la pila
         nodo = nodoPila()  #se debe crear esta variable
         nodo.info = dato    #se le asigna info(el valor del elemento ingresado como dato)
@@ -18,7 +18,7 @@ class Pila(object):
         pila.cima = nodo      #a la cima se le asigna la direccion del nodo cread0
         pila.tamanio += 1    #se aumenta el tamaño
 
-    def desapilar(pila):
+def desapilar(pila):
         #desapila el elemento en la cima de la pila y te devuelve
         x = pila.cima.info    #se saca la informacion del nodo q esta en la cima (y se alamcena en variable auxiliar)
         pila.cima = pila.cima.sig #a la cima se le asigna la direccion de referencia almacenada en el atributo siguiente del nodo de la cima(el q esta justo abajo)

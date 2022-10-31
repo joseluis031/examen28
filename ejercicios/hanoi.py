@@ -1,4 +1,4 @@
-from codigo_pilas import *
+from codigo_pilas import Pila,apilar,de
 torre1 = Pila() #pila vacia
 torreaux = Pila()   #pila vacia
 torre2 = Pila() #pila vacia
