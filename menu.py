@@ -63,9 +63,9 @@ def iniciar():
 
         elif opcion == '4':
             print("Enunciado del ejercicio 4...\n")
+            
             from ejercicios.tda_polinomio import Polinomio,agregar_termino,mostrar,restar,dividir,eliminar,determinar
-            class Nodo(object):
-                info, sig = None, None            
+              #duda como importa fichero q necesito en otro fichero para el menu       
             x_3= Polinomio()
             agregar_termino(x_3,3,1)
             x_2 = Polinomio()
@@ -84,9 +84,15 @@ def iniciar():
 
         
         elif opcion == '5':
+            print("Enunciado del ejercicio 5...\n")
+            from ejercicios.hash import main,descifrar
+            texto = input("Introduce el texto a cifrar:")
+
+            main(texto)
+            descifrar(texto)
+        elif opcion == '6':
             print("Saliendo de la clase de ecuaciones...\n")
             break
 
         input("\nPresiona ENTER para continuar...")
         
-iniciar()

@@ -1,5 +1,4 @@
 import hashlib
-texto = input("Introduce el texto a cifrar:")
 def main(texto):
     
     
@@ -13,7 +12,7 @@ def descifrar(texto):
         print("Mensaje correcto:",texto)
     else:
         print("El mensaje no coincide") 
+        pass
         
-main(texto)
-descifrar(texto)   
+
     
